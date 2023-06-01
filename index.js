@@ -35,7 +35,7 @@ async function run() {
     const bookingsCollection = client.db("aircncDb").collection("bookings");
 
     // save user email and role in db
-    app.put("/users:email", async (req, res) => {
+    app.put("/users/:email", async (req, res) => {
       const email = req.params.email;
       const user = req.body;
       const query = { email: email };
